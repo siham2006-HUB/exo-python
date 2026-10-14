@@ -1,5 +1,5 @@
 from outils import convertir_note ,moyenne, mention
-notes_brutes=["a2,5","15","abc","9","18.25"]
+notes_brutes=["12,5","15","abc","9","18.25"]
 notes=[]
 ignorees=[]
 for texte in notes_brutes:
