@@ -1,15 +1,19 @@
-from outils import convertir_note ,moyenne, mention
-notes_brutes=["12,5","15","abc","9","18.25"]
-notes=[]
-ignorees=[]
+from outils import convertir_note, moyenne, mention
+
+notes_brutes = ["12,5", "15", "abc", "9", "18,25"]
+
+notes = []
+ignorees = 0
 for texte in notes_brutes:
-    note=convertir_note(texte)
+    note = convertir_note(texte)
     if note is None:
-        ignorees+=1
+        ignorees += 1
     else:
         notes.append(note)
-m=moyenne(notes)
-print ("Notes ignorees:",ignorees)
-print("Moyenne:", round(m, 2))
-print("Mention:",mention(m))
+
+m = moyenne(notes)
+print(f"Notes ignorées : {ignorees}")
+print(f"Moyenne : {m:.2f}")
+print(f"Mention : {mention(m)}")
+
       
