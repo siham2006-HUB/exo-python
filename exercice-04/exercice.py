@@ -1,14 +1,21 @@
-ventes=[
-    {"produit": "cafe", "prix": 2.5, "quantite": 120},
-    {"produit": "the", "prix": 2.880, "quantite": 80},
-    {"produit": "jus", "prix": 3.5, "quantite": 45},
+ventes = [
+    {"produit": "café", "prix": 2.5, "quantite": 120},
+    {"produit": "thé", "prix": 2.0, "quantite": 80},
+    {"produit": "jus", "prix": 3.5, "quantite": 45}
 ]
-ca_par_produit={}
-for v in ventes:
-    ca_par_produit[v["produit"]]=v["prix"]*v["quantite"]
-print(ca_par_produit)
-total_ca=sum(ca_par_produit.values())
-print(f"Chiffre d'affaire total: {total_ca:.2f}€")
-meilleur_produit=max(ca_par_produit, key=ca_par_produit.get)
-print(f"Meilleur produit: {meilleur_produit} 
+
+ca_par_produit = {}
+
+for vente in ventes:
+    produit = vente["produit"]
+    ca = vente["prix"] * vente["quantite"]
+    ca_par_produit[produit] = ca
+
+print("Chiffre d'affaires par produit :", ca_par_produit)
+
+total = sum(ca_par_produit.values())
+print("Chiffre d'affaires total :", total, "€")
+
+meilleur_produit = max(ca_par_produit, key=ca_par_produit.get)
+print("Meilleur produit :", meilleur_produit)
       
